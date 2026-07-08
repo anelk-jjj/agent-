@@ -9,3 +9,16 @@ def payment():
     print("支付成功")
 
 payment()
+
+def makecounter():
+    count =0
+    def counter():
+        nonlocal count
+        count +=1
+        print(f"当前计数为：{count}")
+    return counter
+
+counter = makecounter()
+counter()
+counter()
+counter()
